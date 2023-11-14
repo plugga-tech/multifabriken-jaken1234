@@ -2,12 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cars {
-    public static Object carList;
     String regNum;
     String color;
     String brand;
 
-    
 
     public String getRegNum() {
         return regNum;
@@ -33,8 +31,8 @@ public class Cars {
         this.brand = brand;
     }
 
-    public String showCar(){
-        return "Bil nr " + carList + "Bilmärke: " + brand + "\nReg.nr: " + regNum + "\nFärg: " + color;
+    public String toString(){
+        return "\nBilmärke: " + brand +"\nReg.nr: " + regNum + "\nFärg: " + color;
     }
     
 }
