@@ -1,10 +1,7 @@
-import java.util.StringJoiner;
-
 public class Cars {
     String regNum;
     String color;
     String brand;
-
 
     public String getRegNum() {
         return regNum;
@@ -33,5 +30,4 @@ public class Cars {
     public String toString(){
         return "\nBilmärke: " + brand +"\nReg.nr: " + regNum + "\nFärg: " + color;
     }
-    
 }
