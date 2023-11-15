@@ -6,7 +6,7 @@ import java.util.StringJoiner;
 
 public class Menu {
     private Scanner sc = new Scanner(System.in);
-    private String startMenu = "\n -MENU-\n(1) Cars\n(2) Candy\n(3) Pipes\n(4) Oatmilk\n(5) Show orders\n(6) Exit";
+    private String startMenu = "\n-Multifactory-\n(1) Cars\n(2) Candy\n(3) Pipes\n(4) Oatmilk\n(5) Show orders\n(6) Exit";
     private List <Cars> carList = new ArrayList<>();
     private List <Candy> candyList = new ArrayList<>();
     private List <Pipes> pipeList = new ArrayList<>();
