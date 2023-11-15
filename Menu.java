@@ -2,17 +2,27 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class Menu {
-    private List <Cars> carList=new ArrayList<>();
+    private List <Cars> carList = new ArrayList<>();
+    private List <Candy> candyList = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
-    private String startMenu = "MENU\n(1) Bilar\n(2) Godisar \n(3) Rör\n(4) Havremjölk\n(5) Visa beställningar\n(6) Avsluta";
+
+    private String startMenu = "\nMENU\n(1) Bilar\n(2) Godisar \n(3) Rör\n(4) Havremjölk\n(5) Visa beställningar\n(6) Avsluta";
+    
+    private <T> String getListString(List<T> list, String header){
+        StringJoiner joiner = new StringJoiner ("\n");
+        for (T item : list){
+            joiner.add(item.toString());
+        }
+        return header + "\n" + joiner.toString();
+    }
 
     public void showMeny() {
         boolean run = true;
         while (run) {
             System.out.println(startMenu);
-
             try {
                 int choice = sc.nextInt();
                 sc.nextLine();
@@ -29,7 +39,12 @@ public class Menu {
                         carList.add(car);
                         break;
                     case 2:
-                        //godis
+                        Candy candy = new Candy();
+                        System.out.println("Ange smak");
+                        candy.setTaste(sc.nextLine());
+                        System.out.println("Ange antal");
+                        candy.setQuantity(sc.nextInt());
+                        candyList.add(candy);
                         break;
                     case 3:
                         //rör
@@ -38,9 +53,9 @@ public class Menu {
                         //havremjölk
                         break;
                     case 5:
-                        System.out.println("Bilar:");
-                        System.out.println(carList.toString().replace("[","").replace("]","").replace(",",""));
-                        System.out.println("Godis:");
+                        System.out.println(getListString(carList, "\nBilar:\n__________"));
+                        System.out.println(getListString(candyList, "\nCandy:\n__________"));
+                        
                         break;
                     case 6:
                         System.out.println("Programmet avslutas.");
