@@ -28,6 +28,6 @@ public class Cars {
     }
 
     public String toString(){
-        return "\nBilmärke: " + brand +"\nReg.nr: " + regNum + "\nFärg: " + color;
+        return "\nCarbrand: " + brand +"\nRegistration number: " + regNum + "\nColor: " + color;
     }
 }

@@ -20,6 +20,6 @@ public class Oatmilk {
     }
 
     public String toString(){
-        return "\nFetthalt: " + fatcontent +"\nLiter: " + liter;
+        return "\nFatcontent: " + fatcontent +"\nLiter: " + liter;
     }
 }

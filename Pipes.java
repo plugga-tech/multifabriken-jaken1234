@@ -1,5 +1,5 @@
 public class Pipes {
-    
+
     private double diameter;
     private double length;
     
@@ -20,6 +20,6 @@ public class Pipes {
     }
 
     public String toString(){
-        return "\nDiameter: " + diameter +"\nLängd: " + length;
+        return "\nDiameter: " + diameter +"\nLength: " + length;
     }
 }

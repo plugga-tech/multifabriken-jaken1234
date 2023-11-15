@@ -14,12 +14,12 @@ public class Candy {
     public int getQuantity() {
         return quantity;
     }
-    
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
     public String toString(){
-        return "\nSmak: " + taste +"\nAntal: " + quantity;
+        return "\nTaste: " + taste +"\nQuantity: " + quantity;
     }
 }
