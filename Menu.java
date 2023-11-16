@@ -19,7 +19,7 @@ public class Menu {
         return header + "\n" + joiner.toString();
     }
     
-    public void showMeny() {
+    public void showMenu() {
         boolean run = true;
         while (run) {
             System.out.println(startMenu);
