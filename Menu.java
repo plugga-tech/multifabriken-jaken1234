@@ -43,7 +43,6 @@ public class Menu {
                                 carList.add(car);                           
                             } catch (InputMismatchException e) {
                                 System.out.println("Invalid input");
-                                sc.nextLine();
                         }
                             break;
                         case 2:
@@ -56,28 +55,57 @@ public class Menu {
                                 }           
                                 candy.setTaste(tasteInput);           
                                 System.out.println("Enter quantity:");
-                                candy.setQuantity(sc.nextInt());                    
+                                int quantityInput = sc.nextInt();
+                                if (quantityInput<=0){
+                                    throw new InputMismatchException();
+                                }
+                                candy.setQuantity(quantityInput);                    
                                 candyList.add(candy);
+                                sc.nextLine();                              
                             } catch (InputMismatchException e) {
-                                System.out.println("Invalid input");
-                                sc.nextLine();
+                                System.out.println("Invalid input");                                
                             }
                             break;
                         case 3:
                             Pipes pipes = new Pipes();
-                            System.out.println("Enter diameter:");
-                            pipes.setDiameter(sc.nextDouble());
-                            System.out.println("Enter length:");
-                            pipes.setLength(sc.nextDouble());
-                            pipeList.add(pipes);
+                            try{
+                                System.out.println("Enter diameter:");
+                                double diameterInput = sc.nextDouble();
+                                if(diameterInput<=0) {
+                                    throw new InputMismatchException();
+                                }
+                                pipes.setDiameter(diameterInput);
+                                System.out.println("Enter length:");
+                                double lengthInput = sc.nextDouble();
+                                if(lengthInput<=0){
+                                    throw new InputMismatchException();
+                                }
+                                pipes.setLength(lengthInput);
+                                pipeList.add(pipes);
+                                sc.nextLine();
+                            } catch (InputMismatchException e) {
+                                System.out.println("Invalid input");
+                            }                            
                             break;
                         case 4:
                             Oatmilk oatmilk = new Oatmilk();
-                            System.out.println("Enter fatcontent:");
-                            oatmilk.setFatcontent(sc.nextDouble());
-                            System.out.println("Enter liter quantity:");
-                            oatmilk.setLiter(sc.nextDouble());
-                            oatmilkList.add(oatmilk);
+                            try{
+                                System.out.println("Enter fatcontent:");
+                                double fatcontentInput=sc.nextDouble();
+                                if(fatcontentInput<0) {
+                                    throw new InputMismatchException();
+                                }
+                                oatmilk.setFatcontent(fatcontentInput);
+                                System.out.println("Enter liter quantity:");
+                                double literInput = sc.nextDouble();
+                                if(literInput<=0) {
+                                    throw new InputMismatchException();
+                                }
+                                oatmilk.setLiter(literInput);
+                                oatmilkList.add(oatmilk); 
+                            } catch (InputMismatchException e) {
+                                System.out.println("Invalid input");
+                            }               
                             break;
                         case 5:
                             boolean emptyList=true;
