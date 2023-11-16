@@ -40,10 +40,11 @@ public class Menu {
                                     throw new InputMismatchException();
                                 }
                                 car.setColor(colorInput);
-                                carList.add(car);                           
+                                carList.add(car);
+                                System.out.println("\n*New car added to the shoppingcart.");                           
                             } catch (InputMismatchException e) {
                                 System.out.println("Invalid input");
-                        }
+                            }
                             break;
                         case 2:
                             Candy candy = new Candy();
@@ -61,7 +62,7 @@ public class Menu {
                                 }
                                 candy.setQuantity(quantityInput);                    
                                 candyList.add(candy);
-                                sc.nextLine();                              
+                                System.out.println("\n*New candy added to the shoppingcart.");                              
                             } catch (InputMismatchException e) {
                                 System.out.println("Invalid input");                                
                             }
@@ -82,7 +83,7 @@ public class Menu {
                                 }
                                 pipes.setLength(lengthInput);
                                 pipeList.add(pipes);
-                                sc.nextLine();
+                                System.out.println("\n*New pipe added to the shoppingcart.");
                             } catch (InputMismatchException e) {
                                 System.out.println("Invalid input");
                             }                            
@@ -103,6 +104,7 @@ public class Menu {
                                 }
                                 oatmilk.setLiter(literInput);
                                 oatmilkList.add(oatmilk); 
+                                System.out.println("\n*New oatmilk added to the shoppingcart.");
                             } catch (InputMismatchException e) {
                                 System.out.println("Invalid input");
                             }               
