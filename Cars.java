@@ -1,7 +1,8 @@
 public class Cars {
-    String regNum;
-    String color;
-    String brand;
+    
+    private String regNum;
+    private String color;
+    private String brand;
 
     public String getRegNum() {
         return regNum;
